@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="stylesheets/style.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="javascripts/jquery-3.5.1.js" charset="utf-8"></script>
+    <title></title>
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        cursor: url(thedot.png), auto;
+        height: 100vh;
+        overflow: hidden;
+        width: 100vw;
+
+      }
+
+      /* .line1 {
+        position: relative;
+        display: none;
+        height: 1px;
+        background: white;
+        width: 300px;
+        -webkit-animation-name: rotate1;
+        -webkit-animation-duration: 10s;
+         transform-origin: top left;
+         -webkit-animation-name: width1;
+         -webkit-animation-duration: 10s;
+
+        top: 600px;
+        left: 50vw;
+      } */
+
+p, a {
+  color: white;
+  font-weight: lighter;
+  text-decoration: none;
+}
+h2 {
+  color: white;
+  font-size: 20px;
+
+
+}
+
+      .blue, .double, .third {
+        position: absolute;
+        display: block;
+        height: 100vh;
+        width: 100vh;
+        border-radius: 100%;
+        filter: blur(60px);
+        background: #00CBFF;
+        margin: 0 auto;
+        left: calc(100vw / 2 - 50vh);
+         animation: bluech 15s alternate infinite;
+
+      }
+      .blue {
+        /* height: 150vh;
+        width: 150vh; */
+        opacity: 50;
+      }
+      .double {
+        left: -10%;
+        top: -10%;
+        background: #D170FF;
+
+
+            animation: doublech 15s alternate infinite;
+            /* animation: doublesize 15s alternate infinite; */
+             opacity: 50;
+
+      }
+      .third {
+        top: 20%;
+        left: calc(100vw / 3 + 50vh);
+          background: #5768FF;
+          opacity: 50;
+         animation: thirdch 15s alternate infinite;
+
+      }
+
+
+
+      .yellow, .secondyellow, .thirdyellow, .fourthyellow {
+        position: absolute;
+        display: block;
+        height: 60vh;
+        width: 60vh;
+        border-radius: 100%;
+        filter: blur(80px);
+        background: #FFD600;
+        margin: 0 auto;
+        left: calc(100vw / 2 - 30vh);
+        top: calc(100vh / 2 - 30vh);
+      }
+
+      .secondyellow{
+        left: 60%;
+        top:-40%;
+        background: #49DDFF;
+      }
+
+      .thirdyellow {
+        left: 85%;
+        top: 55%;
+        background: #FFD600;
+
+      }
+
+      .fourthyellow {
+        left: 10%;
+        top: 80%;
+        background: #FFD600;
+
+
+      }
+
+      .pink {
+        position: absolute;
+        display: block;
+        height: 20vh;
+        width: 20vh;
+        border-radius: 100%;
+        filter: blur(70px);
+        background: #FF28EA;
+        margin: 0 auto;
+        left: calc(100vw / 2 - 10vh);
+        top: calc(100vh / 2 - 10vh);
+      }
+      .dot {
+        position: absolute;
+        display: block;
+        height: 5vh;
+        width: 5vh;
+        border-radius: 100%;
+        background: white;
+        margin: 0 auto;
+        filter: blur(2px);
+        left: calc(100vw / 2 - 2.5vh);
+        top: calc(100vh / 2 - 2.5vh);
+      }
+
+      .wl {
+        position: absolute;
+        display: block;
+        height: 8vh;
+        width: 8vh;
+        border-radius: 100%;
+        background: white;
+        margin: 0 auto;
+        filter: blur(15px);
+        left: calc(100vw / 2 - 4vh);
+        top: calc(100vh / 2 - 4vh);
+      }
+
+      .header  {
+        position: relative;
+        display: block;
+        width: 88vw;
+        height: 20%;
+
+        margin: 0 auto;
+
+
+      }
+      .logo {
+        width: 240px;
+        position: relative;
+        display: inline-block;
+        margin-top: 8px;
+
+
+
+      }
+
+
+      .number {
+        position: relative;
+        display: inline-block;
+
+
+
+
+
+      }
+      .email {
+          position: relative;
+        display: inline-block;
+
+
+
+
+      }
+      .adress {
+        position: relative;
+      display: inline-block;
+
+
+      }
+      .number, .email, .adress {
+          margin-left: 10%;
+          top: -27%;
+          margin-right: 0;
+      }
+      .btn {
+        position: absolute;
+        border: 1px solid white;
+        padding: 10px 34px;
+        background: none;
+        display: block;
+        /* margin: 10px 0px 0; */
+        width: 200px;
+        cursor: pointer;
+
+        text-align: center;
+        bottom: 0;
+        margin-bottom: 40px;
+        right: 0;
+      }
+
+      .sign {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 40px;
+        left: 0;
+
+      }
+
+      .menu {
+        display: block;
+        position: absolute;
+        width: 500px;
+        height: 400px;
+        left: calc(100vw / 2 - 250px);
+        top: calc(100vh / 2 - 200px);
+      }
+      .rays img {
+        display: block;
+        position: absolute;
+        width: 100%;
+        width: 70%;
+        left: 120px;
+        top: 38px;
+      }
+
+      .onas {
+        display: block;
+        position: absolute;
+        left: 400px;
+      }
+      .cont{
+        display: block;
+        position: absolute;
+        left: 350px;
+        top: 300px;
+      }
+      .test{
+        display: block;
+        position: absolute;
+        left: 490px;
+        top: 160px;
+
+      }
+      .dis{
+        display: block;
+        position: absolute;
+        left: 60px;
+        top: 345px;
+      }
+      .ph{
+        display: block;
+        position: absolute;
+        left: 50px;
+        top: 120px;
+      }
+      .mn h2 {
+        cursor: pointer;
+        font-weight: lighter;
+
+      }
+      .mn:hover h2 {
+        text-decoration: underline;
+        font-weight: normal;
+
+
+      }
+
+
+
+
+      @keyframes bluech {
+        from {background: #00CBFF;}
+        to {background: #AD00FF;} }
+
+        @keyframes doublech {
+          from {background: #D170FF;}
+          to {background: #49DDFF;} }
+
+
+          @keyframes thirdch {
+            from {background: #5768FF;}
+            to {background: #AD00FF;} }
+
+
+          /* @keyframes doublesize {
+            from {width, height: 100vh;}
+            to {width, height: 20vh;} } */
+
+
+        @keyframes rotate1 {
+      0% {-webkit-transform:rotate(0deg);}
+      100% {-webkit-transform:rotate(50deg);}
+    }
+
+    @keyframes width1 {
+0% {
+  transform: scaleX(121);
+}
+100% {
+  transform: scaleX(1);
+}
+}
+    </style>
+    <script>
+
+    $(document).ready(function(){
+
+    $(".test").click(function(){
+      $(window).html("quiz.html");
+       });
+
+       $(".btn").click(function(){
+         $('.header').css("display", "none");
+          $(this).css("display", "none");
+          $('.sign').css("display", "none");
+          $('.menu').css("display", "none");
+        });
+
+
+            $(".back").click(function(){
+              $('.header').css("display", "block");
+               $(".btn").css("display", "block");
+               $('.sign').css("display", "block");
+                 $('.menu').css("display", "block");
+
+               });
+
+
+
+
+          });
+
+
+
+
+
+
+
+    </script>
+
+  </head>
+  <body>
+
+<div class="back">
+
+<div class="third"></div>
+<div class="double"></div>
+  <div class="blue"></div>
+
+
+  <div class="yellow"></div>
+  <div class="secondyellow"></div>
+  <div class="thirdyellow"></div>
+  <div class="fourthyellow"></div>
+  <div class="pink"></div>
+  <div class="wl">
+  </div>
+  <div class="dot"></div>
+
+</div>
+
+<div class="header">
+<div class="logo">
+  <img src="images/SVG/logo.svg" alt="">
+</div>
+
+
+<div class="email">
+  <p>flowerchildren@mail.ru</p>
+
+</div>
+
+<div class="number">
+  <p>+8 (888) 888-88-88</p>
+
+
+</div>
+
+<div class="adress">
+  <p>ул. Малая Пионерская, 12</p>
+</div>
+
+
+</div>
+
+<div class="btn">
+<p>zen mode</p>
+</div>
+<!-- <div class="sign">
+  <p>HSE ADC 2021</p>
+</div> -->
+
+<div class="menu">
+
+<div class="rays">
+  <img src="images/SVG/rays.svg" alt="">
+</div>
+<div class="mn onas">
+  <h2><a href="onas.html">о нас</a></h2>
+</div>
+<div class="mn cont">
+  <h2>контакты</h2>
+</div>
+<div class="mn test">
+  <h2><a href="quiz.html">тест</a></h2>
+</div>
+<div class="mn dis">
+  <h2>дисциплины</h2>
+</div>
+<div class="mn ph">
+  <h2>фото</h2>
+</div>
+
+</div>
+
+
+
+
+<!-- <a href="quiz.html" id=test>Тест</a> -->
+  </body>
+</html>

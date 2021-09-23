@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascripts/jquery-3.5.1.js" charset="utf-8"></script>
+<style media="screen">
+
+  body {
+
+
+
+
+  }
+
+.container {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1500px;
+  overflow: hidden;
+  z-index: 2;
+}
+.second {
+  position: absolute;
+  display: block;
+  top: 500px;
+}
+  .content {
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    width: 800px;
+    height: 2000px;
+    left: calc(100vw / 2 - 400px);
+    z-index: 1;
+
+  }
+  .content p {
+    line-height: 30px;
+  }
+
+  /* .arrow {
+
+    height: 40px;
+    width: 20px;
+    position: relative;
+  }
+  .mid {
+    background-color: black;
+    height: 100%;
+    width: 1px;
+  }
+
+  .left {
+    background-color: black;
+    height: 20px;
+    width: 1px;
+    transform: rotate(100);
+  } */
+
+  .page, .page4 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+
+  }
+  .page4 h2 {
+    top: 50%;
+  }
+
+  .text {
+    display: block;
+    position: relative;
+    top: 40%;
+    margin-top: 20px;
+  }
+    .two {
+      top: 0;
+    }
+    .pictures {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 500px;
+
+    }
+    .picturebox {
+        position: relative;
+
+        display: inline-block;
+      width: 200px;
+      margin: 30px;
+      text-align: center;
+      justify-content: space-around;
+
+    }
+
+    .picturebox img {
+      width: 150px;
+    }
+
+    .tan img {
+      width: 180px;
+    }
+
+    .kach img {
+      width: 210px;
+    }
+
+    .strel img {
+      width: 160px;
+    }
+
+
+    .lineone, .linetwo {
+      display: block;
+      position: relative;
+      height: 50%;
+
+    }
+
+    .linetwo {
+      justify-content: space-around;
+      padding-left: 15%;
+    }
+  .forlight {
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 0%;
+    top: 100px;
+    left: 70%;
+  }
+
+
+
+  .green1 {
+    width: 20%;
+    height: 20%;
+    top: 0%;
+    left: 20%;
+
+  }
+
+  .green2 {
+    width: 20%;
+    height: 20%;
+    top: 0%;
+    left: 5%;
+
+  }
+
+
+  .yellow1 {
+    width: 20%;
+    height: 20%;
+    top: 300px;
+    left: 70%;
+
+  }
+
+  .blue1 {
+    left: 50%;
+    top: 20%;
+  }
+
+  .purple1 {
+    width: 25%;
+    height: 25%;
+    left: 35%;
+    top: 600px;
+  }
+.building img {
+
+  width: 40%;
+height: 200%;
+display: inline-block;
+position: relative;
+}
+
+.header  {
+  position: absolute;
+  left: 100px;
+  display: block;
+  width: 88vw;
+  height: 10%;
+
+  margin: 0 auto;
+
+
+}
+.logo {
+  width: 240px;
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+  color: black;
+
+
+
+}
+
+
+.number {
+  position: relative;
+  display: inline-block;
+
+
+
+
+
+}
+.email {
+    position: relative;
+  display: inline-block;
+
+
+
+
+}
+.adress {
+  position: relative;
+display: inline-block;
+
+
+}
+.number, .email, .adress {
+    margin-left: 10%;
+    top: -35px;
+    margin-right: 0;
+}
+
+</style>
+<script>
+
+  let x;
+
+
+  $(window).on('scroll', function() {
+    x = $(window).scrollTop();
+    $('.forlight').css('width', 0 + parseInt(x / 5) + '%');
+    $('.forlight').css('height', 0 + parseInt(x / 5) + '%');
+    $('.forlight').css('left', 70 + parseInt(x / 5) + '%');
+  });
+
+  $(window).on('scroll', function() {
+    x = $(window).scrollTop();
+    $('.blue1').css('width', 0 + parseInt(x / 10) + '%');
+    $('.blue1').css('height', 0 + parseInt(x / 10) + '%');
+    $('.blue1').css('left', 50 - parseInt(x / 3) + '%');
+  });
+
+
+  $(window).on('scroll', function() {
+    x = $(window).scrollTop();
+    $('.green1').css('width', 20 - parseInt(x / 8) + '%');
+    $('.green1').css('height', 20 - parseInt(x / 8) + '%');
+    $('.green1').css('left', 20 - parseInt(x / 5) + '%');
+
+  });
+
+  $(window).on('scroll', function() {
+    x = $(window).scrollTop();
+    $('.green2').css('width', 20 - parseInt(x / 8) + '%');
+    $('.green2').css('height', 20 - parseInt(x / 8) + '%');
+    $('.green2').css('left', 5 - parseInt(x / 5) + '%');
+
+  });
+
+  $(window).on('scroll', function() {
+    x = $(window).scrollTop();
+    $('.yellow1').css('width', 20 - parseInt(x / 8) + '%');
+    $('.yellow1').css('height', 20 - parseInt(x / 8) + '%');
+    $('.yellow1').css('left', 70 + parseInt(x / 5) + '%');
+
+  });
+
+  $(window).on('scroll', function() {
+    x = $(window).scrollTop();
+    $('.purple1').css('width', 25 - parseInt(x / 8) + '%');
+    $('.purple1').css('height', 25 - parseInt(x / 8) + '%');
+    $('.purple1').css('left', 35 + parseInt(x / 5) + '%');
+
+  });
+
+
+</script>
+
+
+
+  </head>
+  <body>
+
+    <div class="header">
+    <div class="logo">
+      <img src="images/SVG/logo_b.svg" alt="">
+    </div>
+
+
+    <div class="email">
+      <p>flowerchildren@mail.ru</p>
+
+    </div>
+
+    <div class="number">
+      <p>+8 (888) 888-88-88</p>
+
+
+    </div>
+
+    <div class="adress">
+      <p>ул. Малая Пионерская, 12</p>
+    </div>
+
+
+    </div>
+    <div class="container">
+    <div class="forlight">
+
+      <img src="images/SVG/redlight.svg" alt="">
+    </div>
+
+    <div class="forlight green1">
+      <img src="images/SVG/greenlight.svg" alt="">
+    </div>
+
+    <div class="forlight yellow1">
+      <img src="images/SVG/yellowlight.svg" alt="">
+    </div>
+
+    <div class="forlight blue1">
+      <img src="images/SVG/indigolight.svg" alt="">
+    </div>
+
+    <div class="forlight purple1">
+      <img src="images/SVG/purplelight.svg" alt="">
+    </div>
+
+      </div>
+
+      <div class="container second">
+      <div class="forlight">
+
+        <img src="images/SVG/redlight.svg" alt="">
+      </div>
+
+      <div class="forlight green2">
+        <img src="images/SVG/bluelight.svg" alt="">
+      </div>
+
+      <div class="forlight yellow1">
+        <img src="images/SVG/yellowlight.svg" alt="">
+      </div>
+
+      <div class="forlight blue1">
+        <img src="images/SVG/indigolight.svg" alt="">
+      </div>
+
+      <div class="forlight purple1">
+        <img src="images/SVG/purplelight.svg" alt="">
+      </div>
+
+        </div>
+
+
+    <div class="content">
+
+
+
+
+
+
+
+
+<div class="page 1">
+
+  <div class="text">
+    <h2>«ПОБЕДИЛА ДРУЖБА» – самая мирная спартакиада со своими уникальными состязательными дисциплинами</h2>
+
+  </div>
+
+  <div class="arrow">
+    <div class="mid"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+
+  </div>
+
+</div>
+
+<div class="page 2">
+
+  <div class="pictures">
+      <div class="lineone">
+
+        <div class="picturebox">
+          <img src="images/SVG/grib.svg" alt="">
+        <h3>Cбор грибочков</h3>
+        </div>
+
+        <div class="picturebox">
+      <img src="images/SVG/ob.svg" alt="">
+            <h3>Состязание объятий</h3>
+    </div>
+    <div class="picturebox strel">
+      <img src="images/SVG/strel.svg" alt="">
+      <h3>Стрельба цветами</h3>
+    </div>
+
+    </div>
+
+    <div class="linetwo">
+      <div class="picturebox tan">
+        <img src="images/SVG/tan.svg" alt="">
+      <h3>Денс-эстафета</h3>
+      </div>
+    <div class="picturebox kach">
+      <img src="images/SVG/kach.svg" alt="">
+          <h3>Качание в траве</h3>
+    </div>
+
+
+
+      </div>
+
+  </div>
+
+  <div class="text two">
+    <p>Наша спартакиада включает в себя 5 активностей, которые вы никогда не встречали раньше, но, приняв участие, не сможете представить свою жизнь без них. Расслабление, улучшение концентрации, укрепление духа и расширение своего сознания – какими бы ни были ваши цели, мы уверены, что вы найдёте что-то для себя. Даже если вы чувствуете неуверенность и сомневаетесь в своих силах, наша дображелательная обстановка поможет вам сосредоточится на том, что действительно важно: получение положительной энергии. </p>
+
+  </div>
+
+</div>
+
+<!-- <div class="page4">
+<h2>Вся наша жизнь наполнена борьбой, порою бессмысленной и беспощадной. Но мы готовы выразить свой протест! </h2>
+
+
+</div> -->
+
+<!-- <div class="page 5">
+
+<div class="building">
+  <img src="images/SVG/map.svg" alt="">
+  <img src="images/SVG/mapside.svg" alt="">
+  </div>
+  <p>Мы предлагаем членам нашего сообщества все необходимые условия для наилучшего времяпровождения. С нас – 500 квадратных метров многофункционального пространства, с вас –  горящие глаза.
+</p>
+
+</div>
+
+<div class="page 6">
+
+  <h2>И каким бы ни был исход соревнования, все и так знают, что
+на самом деле победила дружба.</h2>
+
+</div> -->
+
+
+
+      </div>
+
+  </body>
+</html>

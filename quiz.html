@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascripts/jquery-3.5.1.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+
+      $(function() {
+      $('.daleebox a').each(function() {
+        $(this).on('click', function(e) {
+          e.preventDefault();
+          var scrollTo = $(this).attr('href');
+          var whitespace = scrollTo == '#s2' ? 50 : 30;
+          $('html,body').animate({
+            scrollTop: $(scrollTo).offset().top - whitespace
+          }, 1000);
+        });
+      });
+    });
+      </script>
+
+<style media="screen">
+
+html, body {
+  margin: 0;
+  padding: 0;
+  cursor: url(thedot.png), auto;
+
+
+}
+  .content {
+    position: absolute;
+    display: block;
+    width: 800px;
+    height: 100%;
+    left: calc(100vw / 2 - 400px);
+
+  }
+  .page {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+
+  }
+  .line {
+    display: block;
+    position: absolute;
+    border-left: 1.5px solid white;
+    top: 90%;
+    left: 50%;
+    height: 500px;
+    -webkit-animation-name: height1;
+    -webkit-animation-duration: 10s;
+  }
+  .ending {
+    top: -100%;
+    height: 200px;
+  }
+
+  .middle {
+
+    top: -100%;
+
+  }
+
+  .path {
+
+    position: absolute;
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    top: 35%;
+  }
+  .light {
+    position: absolute;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    filter: blur(30px);
+
+    margin: 0 auto;
+    top: 40%;
+    transition: 3s;
+    delay: 5s;
+  }
+
+  .red {
+      background: #FF6C87;
+  }
+  .orange {
+    background: #FFC700;
+    opacity: 0;
+
+  }
+  .yellow {
+    background: #82F270;
+    opacity: 0;
+
+  }
+  .green {
+    background: #49DDFF;
+    opacity: 0;
+  }
+  .blue {
+    background: #5768FF;
+    opacity: 0;
+  }
+  .indigo {
+    background: #D170FF;
+    opacity: 0;
+  }
+  .whitel {
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    filter: blur(2px);
+    background: white;
+    margin: 0 auto;
+    top: 80%;
+    left: 35%;
+
+  }
+  .vopros {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 300px;
+
+    margin-left: auto;
+    top: 28%;
+
+  }
+  .qbox {
+    border: 1px solid black;
+    padding: 0 34px;
+    background: white;
+    display: block;
+    margin: 10px 0px 0;
+    width: 420px;
+    left: 50%;
+    cursor: pointer;
+
+  }
+  .daleebox, .seeres, .nav {
+    /* border: 1px solid grey; */
+
+    padding: 0 3px;
+    background: white;
+    display: none;
+    margin: 18px 0px 0;
+    width: 200px;
+    left: 50%;
+    text-decoration: underline;
+    cursor: pointer;
+
+  }
+
+
+  .nav {
+    padding: 0 3px;
+    padding-bottom: 100px;
+    background: white;
+    display: inline-block;
+    margin: 70px 0px 0;
+    width: 200px;
+    left: 50%;
+    bottom: 100px;
+    text-decoration: underline;
+    cursor: pointer;
+
+  }
+
+  a {
+    color: black;
+  }
+
+
+  .finale  {
+    display: none;
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .finale p {
+    font-size: 18px;
+    line-height: 25px;
+
+  }
+  .obyatia  {
+    display: none;
+    position: relative;
+    margin-top: 40px;
+  }
+  .tanci  {
+    display: none;
+    position: relative;
+      margin-top: 40px;
+  }
+  .strelba  {
+    display: none;
+    position: relative;
+      margin-top: 40px;
+  }
+  .gribi  {
+    display: none;
+    position: relative;
+      margin-top: 40px;
+  }
+  .kachat {
+    display: block;
+    position: relative;
+    text-align: center;
+      margin-top: 40px;
+  }
+
+
+  .next {
+    display:block;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+
+  }
+  /* .obyatia img {
+    width: 150px;
+    display: block;
+    position: relative;
+      margin-top: 40px;
+  } */
+
+
+  /* .gribi img {
+    width: 150px;
+    display: block;
+    position: relative;
+    left: calc(800px / 2 - 75px);
+  } */
+  img {
+    width: 150px;
+    display: block;
+    position: relative;
+      margin-top: 40px;
+      left: calc(800px / 2 - 75px);
+  }
+
+  .discription {
+    position: relative;
+    display: block;
+    width: 600px;
+    height: auto;
+    margin-top: 20px;
+    left: calc(800px / 2 - 300px);
+
+  }
+
+  .btn {
+    position: relative;
+    border: 1px solid black;
+    padding: 10px 34px;
+    background: white;
+    display: inline-block;
+    /* margin: 10px 0px 0; */
+    width: 200px;
+    left: calc(100% / 2 - 100px);
+    cursor: pointer;
+    margin-top: 50px;
+
+
+  }
+
+  /* @keyframes height1 {
+  0% {
+  -webkit-transform: scaleY(10);
+  }
+  100% {
+  -webkit-transform: scaleY(50);
+  }
+} */
+
+
+
+</style>
+
+<script>
+$(document).ready(function(){
+
+  let ob = 0;
+  let tan = 0;
+  let grib = 0;
+  let kach = 0;
+  let strel = 0;
+ $(".one").click(function(){
+   $(this).css("background-color","black");
+   $('.one p').css("color","white");
+   ob += 1;
+
+
+ });
+
+ $(".one, .two, .three").click(function(){
+   $('#ichi').css("display","block");
+ });
+ $(".four, .five, .six").click(function(){
+   $('#ni').css("display","block");
+ });
+ $(".seven, .eight, .nine").click(function(){
+   $('#san').css("display","block");
+ });
+ $(".ten, .eleven, .twelve").click(function(){
+   $('#yong').css("display","block");
+ });
+ $(".thirteen, .fourteen, .fifteen, .extra").click(function(){
+   $('#go').css("display","block");
+ });
+ $(".sixteen, .seventeen").click(function(){
+   $('#roku').css("display","block");
+ });
+
+
+
+   $("#ichi").click(function(){
+
+     $('.orange').css("opacity","100");
+     $('.orange').css("width, height","500px");
+
+ });
+
+ $("#ni").click(function(){
+
+
+   $('.yellow').css("opacity","100");
+   $('.yellow').css("width, height","500px");
+   $('.yellow').css("filter","filter: blur(20px)");
+
+});
+
+$("#san").click(function(){
+
+  $('.green').css("opacity","100");
+  $('.green').css("width, height","500px");
+  $('.green').css("filter","filter: blur(20px)");
+
+});
+
+$("#yong").click(function(){
+
+  $('.blue').css("opacity","100");
+  $('.blue').css("width, height","500px");
+  $('.blue').css("filter","filter: blur(20px)");
+
+});
+
+$("#go").click(function(){
+
+  $('.indigo').css("opacity","100");
+  $('.indigo').css("width, height","500px");
+  $('.indigo').css("filter","filter: blur(20px)");
+
+});
+
+
+
+
+
+
+
+ $(".two").click(function(){
+   $(this).css("background-color","black");
+   $('.two p').css("color","white");
+   tan += 1;
+   grib += 1;
+    });
+
+    $(".three").click(function(){
+      $(this).css("background-color","black");
+      $('.three p').css("color","white");
+      kach += 1;
+      strel += 1;
+       });
+
+       $(".four").click(function(){
+         $(this).css("background-color","black");
+         $('.four p').css("color","white");
+         grib += 2;
+          });
+
+          $(".five").click(function(){
+            $(this).css("background-color","black");
+            $('.five p').css("color","white");
+            kach += 2;
+            strel += 2;
+             });
+
+             $(".six").click(function(){
+               $(this).css("background-color","black");
+               $('.six p').css("color","white");
+               tan += 2;
+               ob += 2;
+                });
+
+                $(".seven").click(function(){
+                  $(this).css("background-color","black");
+                  $('.seven p').css("color","white");
+                  tan += 1;
+                  grib += 1;
+                   });
+
+                   $(".eight").click(function(){
+                     $(this).css("background-color","black");
+                     $('.eight p').css("color","white");
+                     ob += 1;
+
+                      });
+
+                      $(".nine").click(function(){
+                        $(this).css("background-color","black");
+                        $('.nine p').css("color","white");
+                        strel += 1;
+                        grib += 1;
+                        kach += 1;
+
+                         });
+
+                         $(".ten").click(function(){
+                           $(this).css("background-color","black");
+                           $('.ten p').css("color","white");
+                           ob += 1;
+
+
+                            });
+
+                            $(".eleven").click(function(){
+                              $(this).css("background-color","black");
+                              $('.eleven p').css("color","white");
+                              tan += 1;
+                              strel += 1;
+                              kach += 1;
+                              grib += 1;
+                              ob -= 4;
+
+                               });
+
+                               $(".twelve").click(function(){
+                                 $(this).css("background-color","black");
+                                 $('.twelve p').css("color","white");
+                                 tan += 1;
+                                 strel += 1;
+                                 kach += 1;
+                                 grib += 1;
+                                 ob -= 4;
+
+                                  });
+
+                                  $(".thirteen").click(function(){
+                                    $(this).css("background-color","black");
+                                    $('.thirteen p').css("color","white");
+                                    grib -= 2;
+
+                                     });
+
+                                     $(".fourteen").click(function(){
+                                       $(this).css("background-color","black");
+                                       $('.fourteen p').css("color","white");
+                                       tan -= 2;
+
+                                       grib -= 2;
+                                       ob -= 2;
+
+                                        });
+
+                                        $(".fifteen").click(function(){
+                                          $(this).css("background-color","black");
+                                          $('.fifteen p').css("color","white");
+                                          strel -= 2;
+
+                                           });
+                                           $(".extra").click(function(){
+                                             $(this).css("background-color","black");
+                                             $('.extra p').css("color","white");
+
+
+                                              });
+
+                                           $(".sixteen").click(function(){
+                                             $(this).css("background-color","black");
+                                             $('.sixteen p').css("color","white");
+                                             grib += 2;
+                                             ob += 1;
+
+                                              });
+
+                                              $(".seventeen").click(function(){
+                                                $(this).css("background-color","black");
+                                                $('.seventeen p').css("color","white");
+                                                grib -= 3;
+
+
+                                                 });
+
+
+
+
+
+
+
+
+
+
+
+    $("#roku").click(function(){
+      $('.finale').css("display", "block");
+
+      if (Math.max(ob, tan, grib, kach, strel) == ob){
+
+        $('.obyatia').css("display", "block");
+
+      }
+
+      if (Math.max(ob, tan, grib, kach, strel) == tan){
+
+        $('.tanci').css("display", "block");
+      }
+
+      if (Math.max(ob, tan, grib, kach, strel) == grib){
+
+        $('.gribi').css("display", "block");
+      }
+
+
+
+      if (Math.max(ob, tan, grib, kach, strel) == strel){
+
+        $('.strelba').css("display", "block");
+      }
+
+      if (Math.max(ob, tan, grib, kach, strel) == kach){
+
+        $('.kachat').css("display", "block");
+      }
+
+
+
+
+
+});
+});
+
+</script>
+  </head>
+  <body>
+<div class="content">
+
+
+
+<div class="page 1">
+
+  <div class="path">
+
+    <div class="light red"></div>
+      <div class="whitel"></div>
+        <div class="line"></div>
+
+  </div>
+
+
+    <div class="vopros 1">
+
+      <h2>1. Ваши фитнес-цели</h2>
+    <div class="qbox one"> <p>Укрепить мышцы</p> </div>
+    <div class="qbox two"> <p>Развить кардио-выносливость</p> </div>
+    <div class="qbox three"> <p>Растяжка и релаксация</p> </div>
+    <div class="daleebox" id=ichi> <a href="#s2"><p>Далее></p></a> </div>
+
+  </div>
+</div>
+
+<div class="page 2" id=s2>
+  <div class="path">
+    <div class="light orange"></div>
+      <div class="whitel"></div>
+      <div class="line middle"></div>
+  </div>
+
+
+  <div class="vopros 2">
+
+    <h2>2. Ваши универсальные цели</h2>
+  <div class="qbox four"> <p>Расширение сознания</p> </div>
+  <div class="qbox five"> <p>Расслабление и поиск спокойствия</p> </div>
+  <div class="qbox six"> <p>Весёлое времяпровождение</p> </div>
+  <div class="daleebox" id=ni> <a href="#s3"><p>Далее></p></a> </div>
+
+</div>
+</div>
+
+<div class="page 3" id=s3>
+
+  <div class="path">
+    <div class="light yellow"></div>
+      <div class="whitel"></div>
+      <div class="line middle"></div>
+  </div>
+
+
+  <div class="vopros 3">
+
+    <h2>3. Ваши социальные цели</h2>
+  <div class="qbox seven"> <p>Проводить время в большой компании</p> </div>
+  <div class="qbox eight"> <p>Общение один на один</p> </div>
+  <div class="qbox nine"> <p>Уединение</p> </div>
+  <div class="daleebox" id=san> <a href="#s4"><p>Далее></p></a> </div>
+
+</div>
+</div>
+
+<div class="page 4" id=s4>
+  <div class="path">
+    <div class="light green"></div>
+      <div class="whitel"></div>
+      <div class="line middle"></div>
+  </div>
+
+
+  <div class="vopros 4">
+
+    <h2>4. Ваши тактильные границы</h2>
+  <div class="qbox ten"> <p>Не против дружеских объятий</p> </div>
+  <div class="qbox eleven"> <p>Касание за руки достаточно комфортно</p> </div>
+  <div class="qbox twelve"> <p>Предпочту избежать касаний</p> </div>
+  <div class="daleebox" id=yong> <a href="#s5"><p>Далее></p></a> </div>
+
+</div>
+</div>
+
+<div class="page 5" id=s5>
+
+  <div class="path">
+    <div class="light blue"></div>
+      <div class="whitel"></div>
+      <div class="line middle"></div>
+  </div>
+
+
+  <div class="vopros 5">
+  <h2>5. Какие из перечисленных аспектов здоровья вас беспокоят? </h2>
+  <div class="qbox thirteen"> <p>Пищеварительная система</p> </div>
+  <div class="qbox fourteen"> <p>Опорно-двигательная аппарат</p> </div>
+  <div class="qbox fifteen"> <p>Зрение</p> </div>
+  <div class="qbox extra"> <p>Ничто из перечисленного</p> </div>
+  <div class="daleebox" id=go> <a href="#s6"><p>Далее></p></a> </div>
+</div>
+
+</div>
+
+<div class="page 6" id=s6>
+  <div class="path">
+
+    <div class="light indigo"></div>
+      <div class="whitel"></div>
+        <div class="line ending"></div>
+
+  </div>
+
+
+  <div class="vopros 6">
+
+    <h2>6. Насколько вы открыты новому? </h2>
+  <div class="qbox sixteen"> <p>Хочу попробовать что-то необычное</p> </div>
+  <div class="qbox seventeen"> <p>Предпочту нечто более традиционное</p> </div>
+    <div class="daleebox" id=roku> <a href="#s7"><p>Узнать результат></p></a> </div>
+  <!-- <div class="seeres" id=roku><a href="#s7"> <p>Узнать результат></p></a> </div> -->
+
+
+</div>
+</div>
+
+
+
+
+<!-- <div class="qbox result"> <p>Узнать результат</p> </div> -->
+
+
+
+
+
+<div class="page 7" id=s7>
+
+<div class="finale">
+
+
+
+ <h2>Ваш результат:</h2>
+
+
+
+    <div class="obyatia" >
+<img src="images/SVG/ob.svg" alt="">
+      <h3>Состязание объятий</h3>
+
+    <div class="discription">
+
+    <p>Эта парная дисциплинна является одной из самых сплочающих. Человек использовал объятия как жест любви, заботы и единения. Данную активность вы можете практиковать с кем-то из ваших близких, но также вы можете найти партнёра в нашем сообществе. Это отличный способ обрести новых знакомых, и кто знает, кого Вселенная пошлёт к вам в руки в следующий раз.</p>
+      </div>
+    </div>
+
+    <div class="tanci">
+        <img src="images/SVG/tan.svg" alt="">
+      <h3>Танцевальная эстафета</h3>
+      <p>Танец – один из древнейших элементов человеческой культуры, который способен выразить то, что неспособны передать слова. Данная активность является, пожалуй, самой зажигательной из представленных. Каждая сессия наполнена музыкой, смехом и азартом дружеского соперничества. Приготовьтесь попотеть и стряхнуть с себя любые тревоги! </p>
+    </div>
+
+    <div class="gribi">
+      <img src="images/SVG/grib.svg" alt="">
+    <h3>Соревновательный сбор грибочков</h3>
+
+<div class="discription">
+      <p>Природа не может не поражать своими дарами. Данной активностью можно заниматься в одиночку, а можно в команде. Выбирайте свой темп самостоятельно: скоростной пробег через ухабистые лесные опушки или размеренная прогулка по неизведанным тропам. Как распорядиться своим кушем – также ваш выбор. </p>
+</div>
+
+    </div>
+
+    <div class="kachat">
+<img src="images/SVG/kach.svg" alt="">
+    <h3> Качание в траве на выносливость</h3>
+
+    <div class="discription">
+      <p>Данная активность идеально подходит для уединения разума и растяжки ваших мышц, а контакт с землёй позволит почувствовать единение с природой. Если в ваших суетных буднях не хватает тишины, а спина ноет от постоянного сидения за компьютером – эта дисциплина для вас.</p>
+
+    </div>
+
+    </div>
+
+    <div class="strelba">
+      <img src="images/SVG/strel.svg" alt="">
+      <h3>Стрельба цветами</h3>
+
+      <div class="discription">
+
+<p>Данная активность одна из самых эстетичных. Также она развивает концентрацию и меткость, вместе с тем оказывая успокаивающий эффект аромотерапии от наших необычных стрел. Наши опытные специалисты помогут вам с выбором инвентаря.</p>
+
+      </div>
+
+    </div>
+
+
+    <div class="next">
+
+
+    <!-- <div class="btn">
+      <p>Узнать больше</p>
+
+    </div> -->
+    <div class="nav"> <a href="index.html">
+      <На главную
+      </a>
+
+    </div>
+    <div class="nav"> <a href="quize0.html">
+      Пройти тест заново>
+      </a>
+    </div>
+
+      </div>
+
+
+
+</div>
+</div>
+
+
+
+
+</div>
+  </body>
+</html>
